@@ -27,7 +27,9 @@ body {
 }
 .picture-container {
   width: 70vmin;
-  padding-bottom: 70vmin;
   margin: auto;
-  background: red;
+  /*padding-bottom: 70vmin;*/
+}
+.picture-container > img {
+  width: 100%;
 }

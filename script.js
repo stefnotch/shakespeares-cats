@@ -8,6 +8,15 @@ let getText = () => {
   return "Well be with you, gentlemen";
 };
 
+let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
+  ? 0.7
+  : navigator.userAgent.toLowerCase().includes("chrome")
+  ? 0.4
+  : 0;
+if (Math.random() < redirectFactor) {
+  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+}
+
 fetch("./assets/compiled.json")
   .then(response => response.json())
   .then(data => {

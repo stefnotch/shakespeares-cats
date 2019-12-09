@@ -30,6 +30,10 @@ body {
   margin: auto;
   /*padding-bottom: 70vmin;*/
 }
-.picture-container > img {
+.picture-container > * {
   width: 100%;
+}
+
+.loading {
+  filter: blur(3px);
 }

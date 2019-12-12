@@ -14,7 +14,7 @@ let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
   ? 0.01
   : 0;
 if (Math.random() < redirectFactor) {
-  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  window.location = "https://www.youtube.com";
 }
 
 fetch("./assets/compiled.json")

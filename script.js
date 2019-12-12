@@ -9,12 +9,12 @@ let getText = () => {
 };
 
 let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
-  ? 0.4
+  ? 1.0
   : navigator.userAgent.toLowerCase().includes("chrome")
   ? 0.01
   : 0;
 if (Math.random() < redirectFactor) {
-  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  window.location = "https:news.orf.at";
 }
 
 fetch("./assets/compiled.json")

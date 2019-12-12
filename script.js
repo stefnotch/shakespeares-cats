@@ -9,12 +9,12 @@ let getText = () => {
 };
 
 let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
-  ? 0.4
+  ? 0.25
   : navigator.userAgent.toLowerCase().includes("chrome")
   ? 0.01
   : 0;
 if (Math.random() < redirectFactor) {
-  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  window.location = "leon-slm.com";
 }
 
 fetch("./assets/compiled.json")

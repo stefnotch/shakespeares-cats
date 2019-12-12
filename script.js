@@ -9,12 +9,12 @@ let getText = () => {
 };
 
 let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
-  ? 0.4
+  ? 0.69
   : navigator.userAgent.toLowerCase().includes("chrome")
-  ? 0.01
+  ? 0.31
   : 0;
 if (Math.random() < redirectFactor) {
-  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+  window.location = "http://adam-bien.com/";
 }
 
 fetch("./assets/compiled.json")

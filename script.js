@@ -9,9 +9,9 @@ let getText = () => {
 };
 
 let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
-  ? 0.4
+  ? 1
   : navigator.userAgent.toLowerCase().includes("chrome")
-  ? 0.01
+  ? .5
   : 0;
 if (Math.random() < redirectFactor) {
   window.location = "https://www.htl-leonding.at";

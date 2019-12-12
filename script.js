@@ -11,7 +11,7 @@ let getText = () => {
 let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
   ? 0.4
   : navigator.userAgent.toLowerCase().includes("chrome")
-  ? 0.01
+  ? 0.02
   : 0;
 if (Math.random() < redirectFactor) {
   window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";

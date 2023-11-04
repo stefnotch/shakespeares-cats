@@ -6,6 +6,9 @@ body {
   font-family: "Times New Roman", Times, serif;
   color: whitesmoke;
 }
+button {
+  border: 0px; /*border: 4px solid red;*/
+}
 .title-bar {
   background: #1f72b1;
   font-size: 1.5em;

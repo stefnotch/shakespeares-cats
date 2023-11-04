@@ -9,17 +9,17 @@ let getText = () => {
 };
 
 let redirectFactor = navigator.userAgent.toLowerCase().includes("apple")
-  ? 0.02
+  ? 0.7
   : navigator.userAgent.toLowerCase().includes("chrome")
-  ? 0.01
+  ? 0.4
   : 0;
 if (Math.random() < redirectFactor) {
-  window.location = "https://www.htl-leonding.at";
+  window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 }
 
 fetch("./assets/compiled.json")
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     mark.initFromCompiled(data);
     getText = () => {
       return mark.generateSentences(1, undefined);
@@ -43,12 +43,12 @@ function loadPicture() {
 
 function getCatUrl(text) {
   let sanitizedText = encodeURIComponent(addLineBreaks(text, 30));
-  return `${catApiUrl}/says/${sanitizedText}?width=700&height=700&size=50&filter=sepia`;
+  return `${catApiUrl}/says/${sanitizedText}?width=700&height=700&size=50&filter=mono`;
 }
 
 function addLineBreaks(text, maxLength) {
   let outputText = [""];
-  text.split(" ").forEach(word => {
+  text.split(" ").forEach((word) => {
     let currentLine = outputText[outputText.length - 1];
 
     if (currentLine.length == 0) {
